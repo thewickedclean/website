@@ -1,0 +1,92 @@
+---
+layout: base.njk
+title: Car Photos
+images:
+  - before:
+      title: Dirty Rim
+      url: BeforeD/Before_1.jpg
+    after:
+      title: Clean Rim
+      url: AfterD/After_1.jpg
+  - before:
+      title: Pet Hair Overload
+      url: BeforeD/Before_2.jpg
+    after:
+      title: No Pet Hair
+      url: AfterD/After_2.jpg
+  - before:
+      title: Dirty Mercedes SUV
+      url: BeforeD/Before_3.jpg
+    after:
+      title: Clean Mercedes SUV
+      url: AfterD/After_3.jpg
+  - before:
+      title: Dirty Mercedes Station Wagon
+      url: BeforeD/Before_4.jpg
+    after:
+      title: Clean Mercedes Station Wagon
+      url: AfterD/After_4.jpg
+  - before:
+      title: Salt Filled Carpet
+      url: BeforeD/Before_5.jpg
+    after:
+      title: Like New Carpet
+      url: AfterD/After_5.jpg
+  - before:
+      title: Dull Chrome
+      url: BeforeD/Before_6.jpg
+    after:
+      title: Bright & Shiny Chrome
+      url: AfterD/After_6.jpg
+  - before:
+      title: Before
+      url: BeforeD/Before_7.jpg
+    after:
+      title: After
+      url: AfterD/After_7.jpg
+  - before:
+      title: Dirty Dodge Truck
+      url: BeforeD/Before_8.jpg
+    after:
+      title: Clean Coated Dodge Truck
+      url: AfterD/After_8.jpg
+  - before:
+      title: Dirty Audi S4
+      url: BeforeD/Before_9.jpg
+    after:
+      title: Clean Audi S4
+      url: AfterD/After_9.jpg
+  - before:
+      title: 2022 Elantra
+      url: BeforeD/Before_10.jpg
+    after:
+      title: 2022 Elantra Coated
+      url: AfterD/After_10.jpg
+  - before:
+      title: Pitted Aluminum Rims
+      url: BeforeD/Before_11.jpg
+    after:
+      title: Polished Aluminum Rims
+      url: AfterD/After_11.jpg
+  - before:
+      title: Cloudy Headlight
+      url: BeforeD/Before_12.jpg
+    after:
+      title: Polished Headlight
+      url: AfterD/After_12.jpg
+
+---
+<h1 class="text-center">Auto Photos</h1>
+{% for entry in images %}
+<div class="row justify-content-center">
+  <div class="col col-md-4">
+    <h4 class="text-center">{{ entry.before.title }}</h4>
+    <img class="img-fluid" src="/img/{{ entry.before.url }}" /> 
+  </div>
+  <div class="col-md-2"></div>
+  <div class="col col-md-4">
+    <h4 class="text-center">{{ entry.after.title }}</h4>
+    <img class="img-fluid" src="/img/{{ entry.after.url }}" /> 
+  </div>
+</div>
+{% endfor %}
