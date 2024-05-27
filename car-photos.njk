@@ -81,12 +81,14 @@ images:
 <div class="row justify-content-center">
   <div class="col col-md-4">
     <h4 class="text-center">{{ entry.before.title }}</h4>
-    <img class="img-fluid" src="/img/{{ entry.before.url }}" /> 
+    <img class="img-fluid"
+	 src="/.netlify/images?url=/img/{{ entry.before.url }}&h=250" /> 
   </div>
   <div class="col-md-2"></div>
   <div class="col col-md-4">
     <h4 class="text-center">{{ entry.after.title }}</h4>
-    <img class="img-fluid" src="/img/{{ entry.after.url }}" /> 
+    <img class="img-fluid"
+	 src="/.netlify/images?url=/img/{{ entry.after.url }}&h=250" /> 
   </div>
 </div>
 {% endfor %}
