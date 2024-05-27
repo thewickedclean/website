@@ -1,3 +1,8 @@
 hr {
     margin: auto;
 }
+
+.bi-facebook, .bi-instagram, .bi-twitter-x {
+    font-size: 2rem;
+    margin: 0.25em;
+}
