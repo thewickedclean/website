@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: Boat Photos
+images:
+  - before:
+      title: Dirty Boat
+      url: BeforeB/Before_1.jpg
+    after:
+      title: Clean Boat
+      url: AfterB/After_1.jpg
+  - before:
+      title: Moldy Seat Covers
+      url: BeforeB/Before_2.jpg
+    after:
+      title: Clean Seat Covers
+      url: AfterB/After_2.jpg
+  - before:
+      title: Dirty Deck
+      url: BeforeB/Before_3.jpg
+    after:
+      title: Clean Deck
+      url: AfterB/After_3.jpg
+---
+<h1 class="text-center">Boat Photos</h1>
+{% for entry in images %}
+<div class="row justify-content-center">
+  <div class="col col-md-4">
+    <h4 class="text-center">{{ entry.before.title }}</h4>
+    <img class="img-fluid"
+	 src="/.netlify/images?url=/img/{{ entry.before.url }}&h=250" /> 
+  </div>
+  <div class="col-md-2"></div>
+  <div class="col col-md-4">
+    <h4 class="text-center">{{ entry.after.title }}</h4>
+    <img class="img-fluid"
+	 src="/.netlify/images?url=/img/{{ entry.after.url }}&h=250" /> 
+  </div>
+</div>
+{% endfor %}
