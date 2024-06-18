@@ -1,3 +1,31 @@
+---
+nav_pages:
+  - title: Home
+    display_title: Home
+    slug: ""
+  - title: Car Detailing
+    display_title: Car Detailing Packages
+    slug: car-detailing
+  - title: Boat Detailing
+    display_title: Boat Detailing Packages
+    slug: boat-detailing
+  - title: Tint Packages
+    display_title: Tint Packages
+    slug: tint-packages
+  - title: Contact
+    display_title: Contact Us
+    slug: contact
+  - title: Car Photos
+    display_title: Car Detailing Photos
+    slug: car-photos
+  - title: Boat Photos
+    display_title: Boat Detailing Photos
+    slug: boat-photos
+  - title: Tint Photos
+    display_title: Tint Photos
+    slug: tint-photos
+
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,48 +52,14 @@
         </button>
 	<div class="collapse navbar-collapse" id="navbarNav">
 	  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+	    {% for page in nav_pages %}
             <li class="nav-item">
-              <a class="nav-link {% if title == 'Home' %}active{% endif %}"
-	      href="/">
-	        Home
+              <a class="nav-link {% if title == page.title %}active{% endif %}"
+	      href="/{{ page.slug }}">
+	        {{ page.display_title }}
 	      </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link {% if title == 'Car Detailing' %}active{% endif %}"
-	      href="/car-detailing">
-	        Car Detailing Packages
-	      </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if title == 'Boat Detailing' %}active{% endif %}"
-	      href="/boat-detailing">
-	        Boat Detailing Packages
-	      </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if title == 'Tint Packages' %}active{% endif %}"
-	      href="/tint-packages">
-	        Tint Packages
-	      </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if title == 'Contact' %}active{% endif %}"
-	        href="/contact">
-	          Contact us
-	      </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if title == 'Car Photos' %}active{% endif %}"
-	        href="/car-photos">
-	          Car Detailing Photos
-	      </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if title == 'Boat Photos' %}active{% endif %}"
-	        href="/boat-photos">
-	          Boat Detailing Photos
-	      </a>
-            </li>
+	    {% endfor %}
 	  </ul>
 	</div>
       </div>

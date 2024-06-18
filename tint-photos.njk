@@ -1,0 +1,51 @@
+---
+layout: base.njk
+title: Tint Photos
+images:
+  - before:
+      title: Before Window Tint
+      url: Beforetint/Before_1.jpg
+    after:
+      title: After Window Tint
+      url: Aftertint/After_1.jpg
+  - before:
+      title: Before Window Tint
+      url: Beforetint/Before_2.jpg
+    after:
+      title: After Window Tint
+      url: Aftertint/After_2.jpg
+  - before:
+      title: Before Window Tint
+      url: Beforetint/Before_3.jpg
+    after:
+      title: After Window Tint
+      url: Aftertint/After_3.jpg
+  - before:
+      title: Before Window Tint
+      url: Beforetint/Before_4.jpg
+    after:
+      title: After Window Tint
+      url: Aftertint/After_4.jpg
+  - before:
+      title: Before Window Tint
+      url: Beforetint/Before_5.jpg
+    after:
+      title: After Window Tint
+      url: Aftertint/After_5.jpg
+---
+<h1 class="text-center">Tint Photos</h1>
+{% for entry in images %}
+<div class="row justify-content-center">
+  <div class="col col-md-4">
+    <h4 class="text-center">{{ entry.before.title }}</h4>
+    <img class="img-fluid"
+	 src="/.netlify/images?url=/img/{{ entry.before.url }}&h=250" /> 
+  </div>
+  <div class="col-md-2"></div>
+  <div class="col col-md-4">
+    <h4 class="text-center">{{ entry.after.title }}</h4>
+    <img class="img-fluid"
+	 src="/.netlify/images?url=/img/{{ entry.after.url }}&h=250" /> 
+  </div>
+</div>
+{% endfor %}
